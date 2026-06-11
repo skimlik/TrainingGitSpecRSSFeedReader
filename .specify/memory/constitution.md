@@ -1,50 +1,60 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+- Version change: N/A → 1.0.0
+- List of modified principles:
+  - N/A → I. Security-First Configuration
+  - N/A → II. Clean Slate Maintainability
+  - N/A → III. Scalable Separation of Concerns
+  - N/A → IV. Minimal Viable Implementation (MVP-First)
+  - N/A → V. Robust Local Development & Quality
+- Added sections:
+  - Technology Standards
+  - Development Workflow
+- Removed sections: None
+- Templates requiring updates (✅ updated / ⚠ pending):
+  - .specify/templates/plan-template.md (✅ updated)
+  - .specify/templates/spec-template.md (✅ updated)
+  - .specify/templates/tasks-template.md (✅ updated)
+- Follow-up TODOs: None
+-->
+
+# Training Git Spec RSS Feed Reader Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Security-First Configuration
+The Backend MUST implement strict CORS policies (specifically allowing the frontend origin). The Frontend MUST NOT hardcode API URLs; they must be retrieved from `appsettings.json` or environment variables to ensure secure and flexible deployment.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clean Slate Maintainability
+ALL boilerplate template code (Home, Counter, Weather pages) MUST be removed from the Blazor project before any feature implementation. Routing conflicts MUST be verified as resolved to prevent runtime exceptions.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Scalable Separation of Concerns
+Business logic for feed parsing and subscription management MUST be encapsulated in the Backend API. The Frontend MUST be kept thin, managing only UI state and user interactions to facilitate future migration to persistent storage.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Minimal Viable Implementation (MVP-First)
+MVP features MUST be restricted to subscription list management (Add/Display). Feed fetching, parsing, and persistence are deferred to later phases. No "just-in-case" code for future features should be added to the MVP.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Robust Local Development & Quality
+Port consistency across `launchSettings.json` and `appsettings.json` MUST be maintained. Every implementation step MUST be verified through browser testing and API validation before proceeding.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- **Backend**: ASP.NET Core Web API
+- **Frontend**: Blazor WebAssembly
+- **Parsing**: `System.ServiceModel.Syndication` (for Extended-MVP)
+- **Storage**: In-memory (MVP), SQLite (Future)
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+1. **Research**: Map required API endpoints and UI components.
+2. **Boilerplate Cleanup**: Remove demo pages and verify routes.
+3. **Implementation**: Build API first, then UI.
+4. **Validation**: Test "Add" and "List" functionality manually and via browser console.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- All Pull Requests must be checked against these principles.
+- Changes to principles require a MINOR or MAJOR version bump.
+- The `GEMINI.md` file serves as the primary guidance for AI-assisted development.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-06-11 | **Last Amended**: 2026-06-11

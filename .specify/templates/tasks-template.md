@@ -61,14 +61,12 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-Examples of foundational tasks (adjust based on your project):
-
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Remove Blazor template demo pages (Home, Counter, Weather) and fix NavMenu.razor
+- [ ] T005 [P] Verify routing consistency and resolve any ambiguous route exceptions
+- [ ] T006 [P] Configure Backend CORS policy to allow specific Frontend origin
+- [ ] T007 [P] Synchronize port configurations across backend/frontend launchSettings.json and appsettings.json
+- [ ] T008 Setup base API routing and middleware structure
+- [ ] T009 Create in-memory storage for subscriptions in Backend
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 

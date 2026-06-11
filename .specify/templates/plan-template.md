@@ -40,7 +40,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Security-First**: Strict CORS configured? API URL in config?
+- [ ] **Clean Slate**: Template boilerplate removed? Routing verified?
+- [ ] **Separation of Concerns**: Logic in Backend, UI thin?
+- [ ] **MVP-First**: Scope restricted to Subscription management?
+- [ ] **Local Quality**: Ports synchronized across launchSettings/appsettings?
 
 ## Project Structure
 

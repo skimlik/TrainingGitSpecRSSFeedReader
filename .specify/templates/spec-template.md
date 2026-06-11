@@ -87,11 +87,11 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST allow users to add a feed subscription by URL.
+- **FR-002**: System MUST display the list of all active subscriptions.
+- **FR-003**: Backend MUST implement strict CORS allowing only the designated Frontend origin.
+- **FR-004**: Frontend MUST retrieve API base URL from configuration (e.g., `appsettings.json`).
+- **FR-005**: System MUST NOT include any unused Blazor template components (Home, Counter, Weather).
 
 *Example of marking unclear requirements:*
 
